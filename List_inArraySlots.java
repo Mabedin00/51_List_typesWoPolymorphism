@@ -129,4 +129,13 @@ public class List_inArraySlots {
         }
 
      }
+     
+     private Element get(int index) {
+         Element item = new Element(typeOfElements[index],
+                                    intElements[index],
+                                    doubleElements[index],
+                                    stringElements[index]);
+         return item;
+         
+     }
 }

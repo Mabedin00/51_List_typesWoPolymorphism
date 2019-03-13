@@ -45,8 +45,23 @@ public class List_inArraySlots {
        @return a string representation of this list,
        in [a,b,c,] format
       */
-    // public String toString() {
-    // }
+    public String toString() {
+        String output = "[";
+        for (int index = 0; index < filledElements; index++){
+            int num = typeOfElements[index];
+            if (num == 0){
+                output += intElements[index] + ",";
+            }
+            else if (num == 1){
+                output += doubleElements[index] + ",";
+            }
+            else{
+                output += stringElements[index] + ",";
+            }
+        }
+        output += "]";
+        return output;
+    }
 
 
     /**
@@ -68,13 +83,13 @@ public class List_inArraySlots {
               stringElements[filledElements] = "";
               typeOfElements[filledElements] = 0;
             }
-            else if (type == 0) {
+            else if (type == 1) {
               doubleElements[filledElements] = doubleValue;
               intElements[filledElements] = 0;
               stringElements[filledElements] = "";
               typeOfElements[filledElements] = 1;
             }
-            else if (type == 0) {
+            else{
               stringElements[filledElements] = stringValue;
               intElements[filledElements] = 0;
               doubleElements[filledElements] = 0;
